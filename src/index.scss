@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  margin: 100px auto;
+  width: fit-content;
+  position: relative;
+  .elevator {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    border: 1px solid black;
+    background: gray;
+    width: 50px;
+    height: 50px;
+    .door {
+      height: 50px;
+      border-left: 1px solid black;
+    }
+  }
+  .floor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 20px;
+      border: 1px solid black;
+      &:hover {
+        cursor: pointer;
+      }
+      &.selected {
+        background: yellow;
+      }
+      &.arrived {
+        background: green;
+      }
+    }
+    .space {
+      height: 50px;
+      width: 100px;
+      background: whitesmoke;
+      border: 1px solid black;
+    }
+  }
+}
